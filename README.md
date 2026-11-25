@@ -80,7 +80,8 @@ atlas/
 │   ├── inspections.txt
 │   └── documents.txt            (users.txt, atlas.log and reports/ appear after the first run)
 ├── docs/
-│   └── VIVA_NOTES.md            explanation of every class and expected viva questions
+│   ├── VIVA_NOTES.md            explanation of every class and expected viva questions
+│   └── TEAM_PORTIONS.md         the project split into 4 portions, one per team member
 └── src/
     ├── main/java/com/atlas/
     │   ├── Main.java            login, main menu, connects everything

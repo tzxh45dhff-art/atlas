@@ -1,0 +1,15 @@
+# Build output
+target/
+out/
+
+# Runtime-generated data (recreated automatically on first run)
+data/users.txt
+data/atlas.log
+data/*.tmp
+data/reports/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+.DS_Store

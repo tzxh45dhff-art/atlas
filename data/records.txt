@@ -1,0 +1,7 @@
+# id|name|category|location|quantity|status
+1001|Guidance Module GM-12|Guidance Module|Site Alpha|24|Active
+1002|Delivery Platform DP-3|Delivery System|Site Bravo|6|In Storage
+1003|Storage Container SC-41|Storage Container|Site Alpha|40|Under Maintenance
+1004|Diagnostic Kit DK-9|Support Equipment|Site Charlie|15|Active
+1005|Transport Frame TF-5|Support Equipment|Site Bravo|8|Active
+1006|Guidance Module GM-15|Guidance Module|Site Charlie|12|Decommissioned

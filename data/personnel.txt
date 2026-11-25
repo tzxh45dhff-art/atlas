@@ -1,0 +1,7 @@
+# id|name|designation|department|clearanceLevel|status
+2001|Rhea Sandhu|Operations Director|Operations|5|Active
+2002|Arjun Verma|Senior Inspector|Compliance|4|Active
+2003|Meera Iyer|Inspector|Compliance|3|Active
+2004|Karan Bedi|Logistics Officer|Logistics|2|Active
+2005|Sana Qureshi|Security Analyst|Security|3|On Leave
+2006|Vikram Rao|Records Clerk|Administration|1|Retired

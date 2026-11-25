@@ -1,0 +1,6 @@
+# id|name|type|dateAdded|status
+4001|Annual Inspection Report 2026|Report|2026-04-02|Approved
+4002|Compliance Policy v3|Policy|2026-01-15|Approved
+4003|Storage Safety Certificate|Certificate|2026-06-10|Reviewed
+4004|Q3 Audit Findings|Audit Record|2026-10-05|Pending
+4005|Equipment Handling Manual|Manual|2025-11-20|Archived

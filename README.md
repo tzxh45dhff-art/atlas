@@ -10,6 +10,65 @@ It is an administrative CRUD application only. It is not connected to, and does 
 * External libraries: none
 * Build: Maven (`pom.xml`), or plain `javac` with the included scripts
 
+## Problem statement
+
+Organisations that keep inventory, staff, inspection and document records on paper or in scattered files face the same problems:
+information is spread over many places, records are hard to search and update, duplicate or wrong entries creep in,
+nobody can tell who changed what, and reports take a long time to prepare.
+ATLAS addresses these problems with one centralised, validated, menu-driven record system.
+(The data is fictional; the system is an administrative prototype, not a control system.)
+
+## Objectives and status
+
+| Objective | Status | Where to see it |
+|-----------|--------|-----------------|
+| Centralised record management application | Done | `Main` and the four managers |
+| Add, view, search, update, delete records (CRUD) | Done | `ArsenalManager`, `PersonnelManager`, `InspectionManager`, `DocumentManager` |
+| Maintain personnel and inspection information, with links between them | Done | `Inspection` + `InspectionManager` |
+| Generate administrative reports and statistics, with export | Done | `ReportManager` |
+| Basic authentication and input validation | Done | `AuthManager`, `InputHelper`, setters in the models |
+| Apply core Java and OOP concepts | Done | see "Course concepts" below |
+| Foundation for future database and GUI work | Done | models and managers are separate from storage and screens |
+
+## Scope
+
+**Current scope (Phase 1, this prototype):** console interface; four record modules with full CRUD; linked inspection records;
+reports and file export; login with hashed passwords, forced first-time password change and lockout;
+input validation and duplicate protection; text-file persistence with safe writes; audit log; automated tests.
+
+**Out of scope for Phase 1:** database, graphical interface, multiple user roles, encryption of the data files,
+multi-user (simultaneous) access, network access.
+
+**Future scope:**
+
+| Phase | Planned work |
+|-------|--------------|
+| Phase 2 | JDBC and MySQL instead of text files (this also gives foreign keys, concurrent users and fast search) |
+| Phase 3 | Java Swing graphical interface |
+| Later | Role-based permissions (admin and viewer), encrypted document and data storage, richer audit history, advanced search and sorting, CSV and PDF export |
+
+## Course concepts used
+
+| Concept | Where |
+|---------|-------|
+| Variables, data types, operators | all classes; counters, quantities, flags |
+| Conditional statements | validation in `InputHelper`, the setters, `isStrongPassword` |
+| Loops | menus (`do-while`), searches, counting, retry loops in `InputHelper` |
+| `switch-case` | every menu (`run()` methods, `Main`) |
+| Strings | names, `trim`, `split`, `contains`, `equalsIgnoreCase`, `String.format`, `StringBuilder` |
+| Arrays | `static final String[]` choice lists (`STATUSES`, `CATEGORIES`, ...) |
+| Methods | core methods and screen methods in every manager |
+| Classes, objects, constructors | the four record classes and all managers |
+| Encapsulation | private fields, getters and validating setters |
+| Inheritance | `ArsenalRecord`, `Personnel`, `Inspection`, `Document` extend `BaseRecord` |
+| Abstraction and polymorphism | abstract `BaseRecord` with `toRow()` and `toFileLine()` overridden by each child |
+| Collections | `ArrayList` in every manager |
+| Exception handling | `try/catch`, `IllegalArgumentException`, `IOException`, `NumberFormatException`, try-with-resources |
+| File handling | `FileHelper`, data files, log file, report export |
+| Packages and project structure | `com.atlas`, Maven layout |
+| Date and time | `LocalDate`, `LocalDateTime` |
+| Algorithms | linear search, counting, comparison of ISO dates |
+
 ## Quick start
 
 You need a JDK (version 17 or newer). Check with `java -version`.
